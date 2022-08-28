@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-auth
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-auth
+  template:
+    metadata:
+      labels:
+        app: sample-auth
+    spec:
+      containers:
+        - name: sample-auth
+          image: meltaieb/sample-auth:00
+          ports:
+            - containerPort: 8080
