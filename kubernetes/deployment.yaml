@@ -19,3 +19,6 @@ spec:
           image: meltaieb/sample-auth:00
           ports:
             - containerPort: 8080
+          env:
+            - name: CALLBACK_URL
+              value: "http://mibrahim.tech"
