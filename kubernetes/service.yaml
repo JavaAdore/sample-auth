@@ -5,6 +5,8 @@ metadata:
 spec:
   type: NodePort
   selector:
+    matchLabels:
+      app: sample-auth
     app.kubernetes.io/name: sample-auth
   ports:
     - protocol: TCP
