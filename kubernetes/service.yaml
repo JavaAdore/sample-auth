@@ -7,6 +7,10 @@ metadata:
   namespace: default
 spec:
   ports:
-    - protocol: TCP
-      port: 80
+    - nodePort: 30749
+      port: 8080
+      protocol: TCP
       targetPort: 8080
+  selector:
+    app: sample-auth
+  type: NodePort
