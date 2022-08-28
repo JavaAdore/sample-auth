@@ -1,0 +1,25 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: bxWqixadNafkm75TqqBah05Ej8fIrI9J
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            issuer-uri: https://dev-uy72e6f5.us.auth0.com/
+
+swagger:
+  info:
+    apiTitle: Favourite Recipes
+    apiDescription: Task assessment for ABN AMRO
+    apiVersion: 1.0
+    apiContactName: Mohamed Ibrahim Ali
+    apiContactEmail: mibrahim.iti@gmail.com
+    apiContactUrl: https://www.linkedin.com/in/mohamed-ibrahim-ali/
+
+

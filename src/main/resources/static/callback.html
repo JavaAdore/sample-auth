@@ -1,0 +1,6 @@
+<script>
+    window.onload = function() {
+        let accessToken = new URLSearchParams(window.location.hash).get('#access_token')
+        document.body.innerText = accessToken
+    };
+</script>
