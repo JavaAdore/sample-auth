@@ -7,8 +7,6 @@ metadata:
   namespace: default
 spec:
   ports:
-    port: 80
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: sample-auth
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
