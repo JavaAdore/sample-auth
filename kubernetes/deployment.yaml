@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: sample-auth
-          image: meltaieb/sample-auth:00
+          image: meltaieb/sample-auth:01
           ports:
             - containerPort: 8080
           env:
