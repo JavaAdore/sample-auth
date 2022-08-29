@@ -31,7 +31,7 @@
 	@RestController
 	class TestController {
 
-		@Value("{CALLBACK_URL:http://localhost:8080}")
+		@Value("${CALLBACK_URL:http://localhost:8080}")
 		private String callBackUrl;
 
 		@GetMapping("/login")
