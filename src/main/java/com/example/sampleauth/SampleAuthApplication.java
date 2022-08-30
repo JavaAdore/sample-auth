@@ -7,6 +7,8 @@
 	import org.springframework.boot.SpringApplication;
 	import org.springframework.boot.autoconfigure.SpringBootApplication;
 	import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+	import org.springframework.security.core.context.SecurityContext;
+	import org.springframework.security.core.context.SecurityContextHolder;
 	import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 	import org.springframework.web.bind.annotation.GetMapping;
 	import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,6 +55,7 @@
 		@Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
 		public String test(HttpServletRequest request) {
 			JwtAuthenticationToken obj  =(JwtAuthenticationToken) request.getUserPrincipal();
+			String email = obj.getToken().getClaim("http://mibrahim.com/email");
 			return "its working fine user is " + obj.getName();
 		}
 

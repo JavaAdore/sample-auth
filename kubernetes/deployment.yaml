@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: sample-auth
@@ -22,3 +22,10 @@ spec:
           env:
             - name: CALLBACK_URL
               value: "http://mibrahim.tech"
+            - name: DB_USERNAME
+              value: "hamada"
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: password
