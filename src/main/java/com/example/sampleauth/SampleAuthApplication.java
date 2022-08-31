@@ -47,7 +47,7 @@
 		@Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
 		public String test1() throws UnknownHostException {
 			InetAddress IP=InetAddress.getLocalHost();
- 			return "application is up and run "+ IP.toString();
+ 			return "application is up and run with flyway"+ IP.toString();
 		}
 
 

@@ -12,7 +12,17 @@ spring:
         provider:
           auth0:
             issuer-uri: https://dev-uy72e6f5.us.auth0.com/
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: "${DB_URL}"
+    password: "postgres"
+    username: "postgres"
 
+  flyway:
+    url: "${DB_URL}"
+    schemas: public
+    user: "postgres"
+    password: "postgres"
 swagger:
   info:
     apiTitle: Favourite Recipes
